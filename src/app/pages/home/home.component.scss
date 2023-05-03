@@ -30,12 +30,21 @@
   }
 }
 
+// @keyframes sunrise-circle {
+//   from {
+//     fill: #cf25ff;
+//   }
+//   to {
+//     fill: #fa7878;
+//   }
+// }
+
 @keyframes sunrise-circle {
   from {
-    fill: #cf25ff;
+    fill: #313e4e;
   }
   to {
-    fill: #fa7878;
+    fill: #cfcdcd;
   }
 }
 
@@ -66,23 +75,46 @@
   }
 }
 
+// @keyframes sunrise-planet {
+//   from {
+//     background-color: #643d70;
+//     background-position: center 0;
+//   }
+//   to {
+//     background-color: #ff6482;
+//     background-position: center 150px;
+//   }
+// }
+
 @keyframes sunrise-planet {
   from {
-    background-color: #643d70;
+    background-color: #313e4e;
     background-position: center 0;
   }
   to {
-    background-color: #ff6482;
+    background-color: #cfcdcd;
     background-position: center 150px;
   }
 }
+
+// .home-header {
+//   position: relative;
+//   margin: 0;
+//   padding: 0;
+//   height: 150px;
+//   background: radial-gradient(at 30% 150%, #cf25ff, #350659 50%, #000) bottom;
+//   background-size: 100% 400px;
+//   text-indent: -9999px;
+//   overflow: hidden;
+//   animation: sunrise-sky 5s ease-out;
 
 .home-header {
   position: relative;
   margin: 0;
   padding: 0;
   height: 150px;
-  background: radial-gradient(at 30% 150%, #cf25ff, #350659 50%, #000) bottom;
+  // background: radial-gradient(at 30% 150%, #cf25ff, #350659 50%, #000) bottom;
+  background: radial-gradient(at 10% 50%, #313e4e, #313e4e 50%, #000) bottom;
   background-size: 100% 400px;
   text-indent: -9999px;
   overflow: hidden;
@@ -106,8 +138,12 @@
     animation: sunrise-polka 200ms 4s linear backwards;
   }
 
+  // path:nth-of-type(2) {
+  //   fill: #fa7878;
+  // }
+
   path:nth-of-type(2) {
-    fill: #fa7878;
+    fill: #50a983;
   }
 
 }
@@ -128,7 +164,8 @@
   padding: 24px 0;
 }
 .home {
-  background: #ff6482 linear-gradient(#fa7878 50px, #fa787800 150px);
+  // background: #ff6482 linear-gradient(#fa7878 50px, #fa787800 150px);
+  background: #50a983 linear-gradient(#cfcdcd 50px, #fa787800 150px);
   color: #fff;
   animation: sunrise-planet 5s ease-out forwards;
 
@@ -161,5 +198,17 @@
 
   .home-button--rococo {
     background-image: url('../../../assets/chains/rococo.svg');
+  }
+
+  .home-button--rootchain {
+    background-image: url('../../../assets/chains/thxnet-rootchain.svg');
+  }
+
+  .home-button--thx\! {
+    background-image: url('../../../assets/chains/thxnet-thx.png');
+  }
+
+  .home-button--lmt {
+    background-image: url('../../../assets/chains/thxnet-lmt.png');
   }
 }
