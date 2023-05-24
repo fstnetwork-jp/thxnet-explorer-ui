@@ -55,6 +55,12 @@ RUN npm exec ng build -- --configuration ${ENV_CONFIG}
 # STAGE 2: Nginx setup to serve the application.
 
 FROM nginx:stable-alpine
+LABEL description="Container image for THXNET." \
+    io.thxnet.image.type="final" \
+    io.thxnet.image.authors="contact@thxlab.io" \
+    io.thxnet.image.vendor="thxlab.io" \
+    io.thxnet.image.description="THXNET.: Blockchain Explorer Frontend" \
+    org.opencontainers.image.source="https://github.com/thxnet/blockchain-explorer-ui"
 
 # Allow for various nginx proxy configuration.
 ARG NGINX_CONF=nginx/explorer-ui.conf
