@@ -83,14 +83,14 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /app/dist/explorer-ui /usr/share/nginx/html
 
 # Copy config.json file for runtime environment variables.
-ARG CONFIG_JSON=src/assets/config.json
-ENV CONFIG_JSON=$CONFIG_JSON
-COPY $CONFIG_JSON /usr/share/nginx/html/assets/config.json
+# ARG CONFIG_JSON=src/assets/config.json
+# ENV CONFIG_JSON=$CONFIG_JSON
+# COPY $CONFIG_JSON /usr/share/nginx/html/assets/config.json
 
 # Copy privacy-policy.html file.
-ARG PRIVACY_POLICY_HTML=src/assets/privacy-policy.html
-ENV PRIVACY_POLICY_HTML=$PRIVACY_POLICY_HTML
-COPY $PRIVACY_POLICY_HTML /usr/share/nginx/html/assets/privacy-policy.html
+# ARG PRIVACY_POLICY_HTML=src/assets/privacy-policy.html
+# ENV PRIVACY_POLICY_HTML=$PRIVACY_POLICY_HTML
+# COPY $PRIVACY_POLICY_HTML /usr/share/nginx/html/assets/privacy-policy.html
 
 EXPOSE 80
 
