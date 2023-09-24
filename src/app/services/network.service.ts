@@ -104,7 +104,7 @@ export class NetworkService {
 
       this.currentNetwork.next(network);
       this.rs.initialize(network);
-      this.ps.initialize(network, this.vs.currency.value);
+      // this.ps.initialize(network, this.vs.currency.value);
 
       this.pa.run({observableResults: false}).getChainProperties()
         .pipe(
@@ -150,7 +150,7 @@ export class NetworkService {
   }
 
   destroy(): void {
-    this.ps.destroy();
+    // this.ps.destroy();
     this.pa.clearNetwork();
     this.currentNetwork.next('');
     this.settingNetwork = '';
