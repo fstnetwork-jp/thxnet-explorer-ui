@@ -43,12 +43,12 @@ const blocksAnimation = trigger('blocksAnimation', [
       ],
       {optional: true}
     ),
-    query('.block-outer:leave',
-      animate('400ms cubic-bezier(0.2, -0.2, 0.75, 0.75)',
-        style({opacity: 0, transform: 'scale(1.2) rotate(2deg)', 'transform-origin': 'left center'})
-      ),
-      {optional: true}
-    )
+    // query('.block-outer:leave',
+    //   animate('400ms cubic-bezier(0.2, -0.2, 0.75, 0.75)',
+    //     style({opacity: 0, transform: 'scale(1.2) rotate(2deg)', 'transform-origin': 'left center'})
+    //   ),
+    //   {optional: true}
+    // )
   ]))
 ]);
 
@@ -76,7 +76,7 @@ const blockContentAnimation = trigger('blockContentAnimation', [
 })
 export class ExplorerComponent implements OnInit, OnDestroy {
   private destroyer = new Subject<void>();
-  blockListSize = 10;
+  blockListSize = 50;
   latestBlockNumber = new BehaviorSubject<number>(0);
   blocks = new BehaviorSubject<BehaviorSubject<Block>[]>([]);
   searchForm = new FormGroup({
