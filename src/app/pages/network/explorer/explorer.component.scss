@@ -18,6 +18,7 @@
 
 .last-block {
   font-size: 5em;
+  color: #313e4e;
 }
 
 .blocks {
@@ -77,11 +78,13 @@
   }
 
   .transaction {
-    background: #cf25ff;
+    // background: #cf25ff;
+    background: #50a983;
   }
 
   .event {
-    background: #ff6482;
+    // background: #ff6482;
+    background: #313e4e;
   }
 }
 
