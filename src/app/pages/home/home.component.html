@@ -27,7 +27,7 @@
     <div class="home-groups">
 
       <div class="home-group" *ngFor="let group of groups|keyvalue:returnZero">
-        <h2>{{ group.value.relayChain.name || group.key }} and leafchains</h2>
+        <h2>{{ group.value.relayChain.groupName || group.key }}</h2>
         <div class="home-buttons">
 
           <mat-card appearance="outlined" [routerLink]="'/' + group.key" tabindex="0"

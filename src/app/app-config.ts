@@ -27,6 +27,7 @@ export type SubsquidConfig = {
 }
 
 export type NetworkSpecs = {
+  groupName?: string;
   name?: string;
   image?: string;
   relayChain?: string;
